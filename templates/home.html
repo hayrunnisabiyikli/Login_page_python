@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8" />
+    <!-- Ensure proper rendering and touch zooming -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Define the viewport to control layout on mobile browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the title of the page -->
+    <title>Home Page</title>
+    <!-- Link the external stylesheet -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <!-- Link the boxicons stylesheet -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Wrapper for the content -->
+    <div class="wrapper">
+      <!-- Heading for the home page -->
+      <h1>Home Page</h1>
+
+      <!-- Button for login, links to 'asdas' -->
+      <button href="asdas" class="btn">Login</button>
+      <!-- Link to the login page using Flask's url_for function -->
+      <a href="{{ url_for('login') }}" class="btn">Login</a>
+
+      <!-- Link to the register page using Flask's url_for function -->
+      <a href="{{ url_for('register') }}" class="btn">Register</a>
+    </div>
+  </body>
+</html>

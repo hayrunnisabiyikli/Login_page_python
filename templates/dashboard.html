@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta etiketleri: Karakter seti, uyumluluk ve görüntüleme ayarları -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Sayfa başlığı -->
+    <title>Home Page</title>
+    
+    <!-- CSS dosyalarının bağlantıları -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" /> <!-- Özel CSS dosyası -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" /> <!-- Harici ikon kütüphanesi CSS dosyası -->
+    
+    <!-- Dahili stiller -->
+    <style>
+      /* Buton stilleri */
+      .btn {
+        display: inline-block;
+        width: auto;
+        height: 45px;
+        padding: 0 20px;
+        background: #fff;
+        border: none;
+        outline: none;
+        border-radius: 40px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        font-size: 16px;
+        color: #333;
+        font-weight: 600;
+        line-height: 45px;
+        text-align: center;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Ana içerik bölümü sarmalayıcısı -->
+    <div class="wrapper">
+      <!-- Başlık -->
+      <h3>Hello you are logged in.</h3>
+
+      <!-- Çıkış bağlantısı -->
+      <a href="{{ url_for('logout') }}" class="btn">Logout</a>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Set the character encoding for the document -->
+    <meta charset="UTF-8" />
+    <!-- Ensure proper rendering and touch zooming -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Define the viewport to control layout on mobile browsers -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Set the title of the page -->
+    <title>Login Page</title>
+    <!-- Link the external stylesheet -->
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}" />
+    <!-- Link the boxicons stylesheet -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <!-- Wrapper for the content -->
+    <div class="wrapper">
+      <!-- Form for user login -->
+      <form method="POST" action="">
+        <!-- Hidden tag for CSRF protection -->
+        {{ form.hidden_tag() }}
+        <!-- Heading for the login form -->
+        <h1>Login</h1>
+        <!-- Input box for username with boxicon -->
+        <div class="input-box">
+          {{ form.username }}
+          <i class="bx bx-user"></i>
+        </div>
+        <!-- Input box for password with boxicon -->
+        <div class="input-box">
+          {{ form.password }}
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <!-- Section for remember me and forgot password -->
+        <div class="remember-forgot">
+          <!-- Checkbox for remembering login -->
+          <label><input type="checkbox" /> Remember me</label>
+          <!-- Link for forgot password -->
+          <a href="#">Forgot Password?</a>
+        </div>
+        <!-- Button for form submission -->
+        <button type="submit" class="btn">Login</button>
+
+        <!-- Link to register page -->
+        <div class="register-link">
+          <p>
+            Don't have an account?
+            <!-- Link to the registration page using Flask's url_for function -->
+            <a href="{{ url_for('register') }}">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
